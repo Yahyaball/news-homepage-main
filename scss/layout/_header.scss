@@ -1,0 +1,124 @@
+@use "../abstracts" as *;
+
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-300;
+  img {
+    height: 1.75rem;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+    img {
+      height: 1.0625rem;
+    }
+    &:hover {
+      background: transparent;
+    }
+  }
+  .overlay {
+    inset: 0;
+    position: fixed;
+    background-color: $navy-950;
+    z-index: 10;
+    opacity: 0%;
+    visibility: hidden;
+    transition: 500ms ease;
+  }
+  nav {
+    &.show {
+      right: 0;
+      & ~ .overlay {
+        visibility: visible;
+        opacity: 50%;
+      }
+    }
+    transition: right 500ms ease;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    background-color: $white;
+    z-index: 11;
+    width: 16rem;
+    height: 100vh;
+    padding: 1.6875rem 1.3125rem;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: $spacing-1100;
+      width: 211.2px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: $spacing-300;
+        font-size: 1.125rem;
+        color: $navy-950;
+        a {
+          text-decoration: none;
+          color: $navy-950;
+          transition: color 500ms ease;
+          &:hover {
+            color: $red-500;
+          }
+        }
+      }
+      .close-btn {
+        padding: 0;
+        height: auto;
+        img {
+          height: 1.900625rem;
+        }
+      }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    nav,
+    .overlay,
+    nav div ul a {
+      transition: none;
+    }
+  }
+  @media screen and (min-width: 48rem) {
+    nav {
+      width: 19.5rem;
+      padding: 1.6875rem 2.25rem;
+      div {
+        width: 12.275625rem;
+      }
+    }
+  }
+  @media screen and (min-width: 80rem) {
+    button {
+      display: none;
+    }
+    img {
+      height: 2.49375rem;
+    }
+    nav {
+      position: static;
+      height: auto;
+      width: auto;
+      padding: 0;
+
+      div {
+        width: auto;
+        ul {
+          @include text-preset-6;
+          flex-direction: row;
+          gap: $spacing-500;
+        }
+      }
+    }
+  }
+}

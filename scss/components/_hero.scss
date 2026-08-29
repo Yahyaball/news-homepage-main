@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-300;
+    img {
+        width: 100%;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-300;
+        h1 {
+            @include text-preset-2;
+        }
+        p {
+            @include text-preset-6;
+        }
+    }
+      @media screen and (min-width: 80rem) {
+    .divider {
+        display: grid;
+        grid-template-columns: 1.025fr 1fr;
+        h1 {
+            @include text-preset-1;
+        }
+    }
+  }
+}

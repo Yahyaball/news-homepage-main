@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.btn {
+    @include text-preset-7;
+    padding: $spacing-100 $spacing-400;
+    border: none;
+    min-height: 3rem;
+    text-transform: uppercase;
+    background-color: $red-500;
+    color: $navy-950;
+    transition: color 500ms ease, background-color 500ms ease;
+    &:hover {
+        background-color: $navy-950;
+        color: $white;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}

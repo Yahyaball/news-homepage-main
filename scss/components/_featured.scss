@@ -1,0 +1,48 @@
+@use "../abstracts" as *;
+
+.featured {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: none;
+  gap: $spacing-400;
+  article {
+    display: flex;
+    gap: $spacing-300;
+    img {
+      height: 8.0625rem;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-100;
+      span {
+        @include text-preset-3;
+        color: $red-500;
+      }
+      h3 {
+        @include text-preset-5;
+        a {
+          color: $navy-950;
+          text-decoration: none;
+          transition: color 250ms ease;
+          &:hover {
+            color: $red-500;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            transition: none;
+          }
+        }
+      }
+      p {
+        @include text-preset-6;
+        color: $navy-600;
+      }
+    }
+  }
+  @media screen and (min-width: 80rem) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+    gap: $spacing-500;
+    width: 69.5rem;
+  }
+}

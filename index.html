@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" aria-label="W. News - Home" id="logo">
+        <img src="assets/images/logo.svg" alt="W. News logo"/>
+      </a>
+      <nav aria-label="Primary navigation" id="primary-navigation" inert>
+        <div>
+          <button
+            type="button"
+            aria-label="Close menu"
+            aria-expanded="true"
+            aria-controls="primary-navigation"
+            class="close-btn"
+            id="button-close"
+          >
+            <img
+              src="assets/images/icon-menu-close.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </div>
+      </nav>
+      <button
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        id="button-menu"
+      >
+        <img src="assets/images/icon-menu.svg" alt="" aria-hidden="true" />
+      </button>
+      <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+      <div class="section-1">
+        <section aria-labelledby="hero-title" class="hero">
+          <img
+            src="assets/images/image-web-3-desktop.jpg"
+            alt="Abstract colorful geometric shapes representing the next evolution of the web"
+            id="hero-img"
+          />
+          <div class="divider">
+            <h1 id="hero-title">The Bright Future of Web 3.0?</h1>
+            <div>
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button type="button" class="btn">Read more</button>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="new-heading" class="new">
+          <h2 id="new-heading">New</h2>
+          <div>
+            <article>
+              <h3><a href="#">Hydrogen VS Electric Cars</a></h3>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </article>
+            <hr />
+            <article>
+              <h3><a href="#">The Downsides of AI Artistry</a></h3>
+              <p>
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </article>
+            <hr />
+            <article>
+              <h3><a href="#">Is VC Funding Drying Up?</a></h3>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section aria-labelledby="featured-heading" class="featured">
+          <h2 id="featured-heading" class="visually-hidden">
+            Featured articles
+          </h2>
+          <article>
+            <img
+              src="assets/images/image-retro-pcs.jpg"
+              alt="Retro PC with keyboard, cassette tapes and gaming peripherals on a desk"
+            />
+            <div>
+              <span aria-hidden="true">01</span>
+              <h3><a href="#">Reviving Retro PCs</a></h3>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="assets/images/image-top-laptops.jpg"
+              alt="Close-up of laptop keyboard with red backlit keys"
+            />
+            <div>
+              <span aria-hidden="true">02</span>
+              <h3><a href="#">Top 10 Laptops of 2022</a></h3>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="assets/images/image-gaming-growth.jpg"
+              alt="Hand tossing a white gaming controller above a dark background"
+            />
+            <div>
+              <span aria-hidden="true">03</span>
+              <h3><a href="#">The Growth of Gaming</a></h3>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
